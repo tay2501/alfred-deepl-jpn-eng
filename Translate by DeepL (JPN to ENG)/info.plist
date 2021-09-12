@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>translatebydeepl-jpn-eng.tay2501</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>12E8FFD0-9B55-48EC-B3F3-033251D97984</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B47CE735-E320-45C2-8EEB-5F7F8F9E93EA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7C321AC5-3A29-42BE-994A-F23820B0C82E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>12E8FFD0-9B55-48EC-B3F3-033251D97984</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Tay2501</string>
+	<key>description</key>
+	<string>Enter English sentences. It will open DeepL website and translate from English to Japanese.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Translate by DeepL (JPN to ENG)</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>deepl</string>
+				<key>subtext</key>
+				<string>English to Japanese.</string>
+				<key>text</key>
+				<string>Translate English to Japanese by DeepL.</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7C321AC5-3A29-42BE-994A-F23820B0C82E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>%20</string>
+				<key>url</key>
+				<string>https://www.deepl.com/translator#en/ja/{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>B47CE735-E320-45C2-8EEB-5F7F8F9E93EA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>echo -n "$1" \
+  | iconv -t UTF-8 \
+  | xxd -p -u \
+  | sed 's/\(..\)/%\1/g' \
+  | sed 's/%2F/\\%2F/g' \
+  | tr -d '\n'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>12E8FFD0-9B55-48EC-B3F3-033251D97984</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Enter English sentences. It will open DeepL website and translate from English to Japanese.</string>
+	<key>uidata</key>
+	<dict>
+		<key>12E8FFD0-9B55-48EC-B3F3-033251D97984</key>
+		<dict>
+			<key>xpos</key>
+			<integer>185</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>7C321AC5-3A29-42BE-994A-F23820B0C82E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>B47CE735-E320-45C2-8EEB-5F7F8F9E93EA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.0.1</string>
+	<key>webaddress</key>
+	<string>https://github.com/tay2501/alfred-deepl-jpn-eng</string>
+</dict>
+</plist>
