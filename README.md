@@ -1,6 +1,8 @@
 # alfred-deepl-jpn-eng
 Alfred workflow for translating English to Japanese by DeepL.
 
+![https://j.mp/3tNyFV7](https://j.mp/3tNyFV7)
+
 + [Alfred](https://www.alfredapp.com/)
 
 # Overview
