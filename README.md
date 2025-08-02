@@ -1,3 +1,5 @@
+[!["Buy Me A Coffee"](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/tay2501)
+
 # alfred-deepl-jpn-eng
 Alfred workflow for translating English to Japanese by DeepL.
 
